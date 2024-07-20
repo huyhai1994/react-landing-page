@@ -9,7 +9,6 @@ import PhoneRoundedIcon from '@mui/icons-material/PhoneRounded'
 import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded'
 import {Box, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText} from "@mui/material";
 
-
 const NavBar = () => {
     const [openMenu, setOpenMenu] = useState(false);
     /*TODO: menu responsive*/
@@ -30,7 +29,7 @@ const NavBar = () => {
         icon: <ShoppingCartRoundedIcon/>
     }
     ];
-    return (<nav>
+    return <nav>
         <div className="nav-logo-container">
             <img src={Logo} alt='logo'/>
         </div>
@@ -57,20 +56,18 @@ const NavBar = () => {
                  onclick={() => setOpenMenu(false)}
                  onKeyDown={() => setOpenMenu(false)}>
                 <List>
-                    {menuOptions.map((item) => (
-                        <ListItem key={item.text} disablePadding>
-                            <ListItemButton>
-                                <ListItemIcon>
-                                    {item.icon}
-                                </ListItemIcon>
-                            </ListItemButton>
-                            <ListItemText primary={item.text}/>
-                            {/*TODO: chang text color*/}
-                        </ListItem>
-                    ))}
+                    {menuOptions.map((item) => <ListItem key={item.text} disablePadding>
+                        <ListItemButton>
+                            <ListItemIcon>
+                                {item.icon}
+                            </ListItemIcon>
+                        </ListItemButton>
+                        <ListItemText primary={item.text}/>
+                        {/*TODO: chang text color*/}
+                    </ListItem>)}
                 </List>
             </Box>
         </Drawer>
-    </nav>)
+    </nav>
 }
 export default NavBar;
