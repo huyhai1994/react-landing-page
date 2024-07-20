@@ -12,8 +12,8 @@ const About = () => {
                 <img src={AboutBackgroundImage} alt="About Section"/>
             </div>
             <div className="about-section-image-container">
-                <p className="primary-heading">About</p>
-                <h1 className="primary-subheading">
+                <p className="primary-subheading">About</p>
+                <h1 className="primary-heading">
                     Food is an Important part of a balanced diet
                 </h1>
                 <p className="primary-text">
